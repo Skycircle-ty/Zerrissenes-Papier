@@ -1,0 +1,137 @@
+body {
+    background-color: #dddddd;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {  
+    font-family: 'CLoister Black'; /* 自定义字体名称 */  
+    src: url('CloisterBlack.ttf') format('truetype'); /* 字体文件的路径和格式 */  
+    font-weight: normal; /* 字体粗细，可选 */  
+    font-style: normal;  /* 字体样式，可选 */  
+}
+
+.introduction{
+    margin: 100px auto 0;
+    color: black;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    max-width: 960px;
+    width: calc(100% - 2em);
+    line-height: 1.7;
+}
+
+.section-center{
+    text-align: center;
+}
+
+.text{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: blue;
+    font-size: 24px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    height: auto;
+    background-color: #029d6c;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.title{
+    font-size: 36px;
+    color: white;
+    font-family: 'CLoister Black', serif;
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    gap: 20px;
+}
+
+.option{
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    border: 2px solid white;
+    transition: background-color 0.5s ease;
+}
+
+.option:hover{
+    background-color: white;
+    color: #029d6c;
+}
+
+.current{
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+    font-size: 18px;
+    color: #029d6c;
+    background-color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.fade {
+    position: relative;
+    height: 200px;
+    text-align: left;
+    overflow: hidden; /* 添加此行以隐藏溢出内容 */
+}
+
+.fade span {
+    position: absolute;
+    left: 0; /* 将 left 设置为 0 */
+    top: 0; /* 添加 top: 0 以确保垂直对齐 */
+    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.fade span:nth-child(2) {
+    opacity: 0;
+}
+
+.fade span:nth-child(1) {
+    opacity: 1;
+}
+
+.fade:hover span:nth-child(2) {
+    opacity: 1;
+}
+
+.fade:hover span:nth-child(1) {
+    opacity: 0;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; filter: blur(0.2px); }
+    to { opacity: 1; }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+    .fade{
+        height: 350px;
+    }
+}
