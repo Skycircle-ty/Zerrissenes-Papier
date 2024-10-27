@@ -29,8 +29,11 @@ body, html {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .task-container {
@@ -68,11 +71,11 @@ body, html {
 /* 添加媒体查询 */
 @media (max-width: 768px) {
     .text-container {
-        top: 40%;
+        top: 35%;
     }
     
     .task-container {
-        bottom: 20%;
+        bottom: 15%;
     }
 
     .task {
