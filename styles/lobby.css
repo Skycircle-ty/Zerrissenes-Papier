@@ -13,7 +13,7 @@ body {
 }
 
 .introduction{
-    margin: 100px auto 0;
+    margin: 100px auto 50px;
     color: black;
     background-color: white;
     padding: 20px;
@@ -116,6 +116,13 @@ header{
     opacity: 0;
 }
 
+.actor{
+    width:40vw;
+    margin: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
 @keyframes fade-in {
     from { opacity: 0; filter: blur(0.2px); }
     to { opacity: 1; }
@@ -134,4 +141,8 @@ header{
     .fade{
         height: 350px;
     }
+    .actor{
+        width: 70vw;
+    }
 }
+
